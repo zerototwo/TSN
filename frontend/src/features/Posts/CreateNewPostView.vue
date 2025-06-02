@@ -72,7 +72,7 @@
               <button
                   @click="publishPost"
                   class="bg-blue-400 rounded px-4 py-2 text-white cursor-pointer hover:bg-blue-600">
-                Publicar
+                Publish
               </button>
             </div>
 
