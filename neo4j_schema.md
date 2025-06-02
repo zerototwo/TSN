@@ -13,3 +13,13 @@
 - **TAGGED_WITH**: Which tags are included in the post.
 - **INTERESTED_IN_HASHTAG**: Which tags users are interested in.
 
+## Recommendation Algorithm Explanation
+
+The backend provides friend and follow recommendations for users based on the social graph stored in Neo4j. The main logic is as follows:
+
+- **Friend Recommendations**: For a given user, the system recommends other users who are not already friends, prioritizing those with more mutual friends. The query excludes users who are already friends and uses the number of shared friends (mutualFriends) as a key factor.
+- **Follow Recommendations**: For a given user, the system recommends users they are not already following. The algorithm also considers mutual friends and existing relationships (such as whether the user is already a follower or has sent/received friend requests).
+- **Implementation**: These recommendations are generated using Cypher queries in the repository layer (see `FriendsRelationshipRepository` and `FollowRelationshipRepository`). The queries leverage Neo4j's pattern matching to efficiently find suitable candidates and return paginated results as `SocialUserCard` objects, which include user info and relationship context (e.g., isFriend, isFollower, mutualFriends, etc).
+
+This approach enables social recommendations similar to "People You May Know" or "Suggested Follows" in mainstream social platforms, leveraging the structure and relationships in the graph database.
+
