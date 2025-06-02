@@ -1,4 +1,4 @@
-# Social Seed - Build Your Own Social Network with Spring Boot, Neo4j, and Vue.js
+# TSN - Build Your Own Social Network with Spring Boot, Neo4j, and Vue.js
 
 Welcome to Social Seed, a versatile social network seed project built with Spring Boot, Neo4j, and Vue.js. This project serves as a foundation that allows anyone to cultivate and customize their unique social network.
 
