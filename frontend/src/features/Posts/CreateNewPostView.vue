@@ -11,7 +11,7 @@
            @click="hideDialog">
         <div class="bg-white rounded shadow-md w-[40%] h-[50%] flex flex-col" @click.stop>
 
-          <!-- Encabezado -->
+
           <div class="flex items-center justify-between p-4 border-b border-gray-300">
             <div class="flex items-center">
               <img :src="s3Url + currentUser.profileImage" alt="Foto de usuario" class="w-8 h-8 rounded-full mr-2">
@@ -39,10 +39,9 @@
             </textarea>
           </div>
 
-          <!-- Barra de Botones-->
+
           <div class="flex justify-between bg-gray-100 border">
 
-            <!-- Botones Izquierdos-->
             <div class="pl-4 flex gap-3">
               <div class="flex items-center">
                 <div class="h-12 w-12 bg-gray-200 rounded rounded-full flex items-center justify-center
@@ -58,9 +57,9 @@
               </div>
             </div>
 
-            <!-- Botones Derechos-->
+
             <div class="p-3 px-6 flex gap-4">
-              <!-- Botón de visibilidad -->
+
               <button
                   @click="showModal = true"
                   class="bg-white rounded-full px-4 py-2 flex items-center space-x-2 text-black cursor-pointer hover:bg-gray-100">
@@ -82,26 +81,26 @@
       </div>
     </div>
 
-    <!-- Botones para personalizar el Posts -->
+
     <div class="max-w-lg mx-auto">
       <div class="flex justify-between">
         <div class="flex items-center mb-4">
           <div class="p-2 w-full rounded-lg flex items-center justify-center hover:bg-gray-200 focus:outline-none focus:bg-gray-100 cursor-pointer">
-            <!-- Icono e texto -->
+
             <fa icon="fa-solid fa-image" class="text-blue-400"/>
             <p class="pl-2 text-gray-500"> Image </p>
           </div>
         </div>
         <div class="flex items-center mb-4">
           <div class="p-2 w-full rounded-lg flex items-center justify-center hover:bg-gray-200 focus:outline-none focus:bg-gray-100 cursor-pointer">
-            <!-- Icono e texto -->
+
             <fa icon="fa-solid fa-pencil" class="text-yellow-600"/>
             <p @click="showDialog" class="pl-2 text-gray-500">Write Post</p>
           </div>
         </div>
         <div class="flex items-center mb-4">
           <div class="p-2 w-full rounded-lg flex items-center justify-center hover:bg-gray-200 focus:outline-none focus:bg-gray-100 cursor-pointer">
-            <!-- Icono e texto -->
+
             <fa icon="fa-solid fa-clock" class="text-purple-500"/>
             <p class="pl-2 text-gray-500">Schedule Post</p>
           </div>
@@ -117,7 +116,7 @@
     </div>
   </div>
 
-  <!-- Ventana modal para visibilidad-->
+
   <div v-if="showModal" class="fixed inset-0 flex items-center justify-center z-50 bg-gray-900 bg-opacity-50">
     <div class="bg-white rounded-lg p-6 w-80">
       <h2 class="text-lg font-semibold mb-4 text-center">Select Visibility</h2>
