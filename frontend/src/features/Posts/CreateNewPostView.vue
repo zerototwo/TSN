@@ -120,14 +120,14 @@
   <!-- Ventana modal para visibilidad-->
   <div v-if="showModal" class="fixed inset-0 flex items-center justify-center z-50 bg-gray-900 bg-opacity-50">
     <div class="bg-white rounded-lg p-6 w-80">
-      <h2 class="text-lg font-semibold mb-4 text-center">Seleccionar Visibilidad</h2>
+      <h2 class="text-lg font-semibold mb-4 text-center">Select Visibility</h2>
       <div class="flex flex-col gap-2">
         <button v-for="(option, index) in options" :key="index" @click="selectVisibility(option)" class="bg-gray-100 hover:bg-gray-200 rounded-md flex items-center justify-center px-4 py-2">
           <fa :icon="option.icon" class="text-gray-600 pr-3"></fa>
           <span>{{ option.label }}</span>
         </button>
       </div>
-      <button @click="showModal = false" class="mt-4 bg-gray-200 text-gray-700 px-4 py-2 rounded-md hover:bg-gray-300 w-full">Cerrar</button>
+      <button @click="showModal = false" class="mt-4 bg-gray-200 text-gray-700 px-4 py-2 rounded-md hover:bg-gray-300 w-full">Close</button>
     </div>
   </div>
 </template>
