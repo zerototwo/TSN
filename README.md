@@ -32,13 +32,6 @@ This project is designed to be easily customizable. Personalize it by adding fea
 
 Contributions are encouraged! Whether it's adding new features, fixing bugs, or enhancing documentation, your contributions help make TSN better for everyone.
 
-## Contact
-
-- **Developer:** Dairon Pérez Frías
-- **Email:** dairon.perezfrias@gmail.com
-
-Thanks for choosing TSN as the starting point for your social network journey! We look forward to seeing the incredible Social Network that you will build.
-
 ---
 
 **Note:** This README will be updated as the project progresses, currently everything I want to achieve is reflected here and where I am going can be seen in the code.
