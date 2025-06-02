@@ -23,3 +23,53 @@ The backend provides friend and follow recommendations for users based on the so
 
 This approach enables social recommendations similar to "People You May Know" or "Suggested Follows" in mainstream social platforms, leveraging the structure and relationships in the graph database.
 
+## Example Cypher Queries for Recommendations (English)
+
+### Friend Recommendations
+```cypher
+MATCH (au:SocialUser {identifier: $idUserRequest})
+MATCH (uf:SocialUser)
+WHERE au <> uf AND NOT (uf)-[:FRIEND_OF]-(au)
+
+// Find relationship with authenticated user
+OPTIONAL MATCH (au)<-[rfollow:FOLLOWED_BY]-(uf)
+OPTIONAL MATCH (au)-[rfollower:FOLLOWED_BY]->(uf)
+OPTIONAL MATCH (au)-[:FRIEND_OF]-(mf)-[:FRIEND_OF]-(uf)
+
+// Determine if the users are...
+WITH uf,
+    COUNT(rfollow) > 0 AS isFollow,
+    COUNT(rfollower) > 0 AS isFollower,
+    COUNT(mf) AS mutualFriends
+RETURN uf, isFollow, isFollower, mutualFriends
+ORDER BY mutualFriends DESC
+SKIP $skip
+LIMIT $limit
+```
+**Explanation:**
+- Recommends other users who are not already friends with the current user, prioritizing those with more mutual friends.
+- Also returns relationship info such as whether already following or being followed.
+
+### Follow Recommendations
+```cypher
+MATCH (au:SocialUser {identifier: $idUserRequest})
+MATCH (uf:SocialUser)
+WHERE au <> uf AND NOT (uf)-[:FOLLOWED_BY]->(au)
+
+OPTIONAL MATCH (au)-[rfriend:FRIEND_OF]-(uf)
+OPTIONAL MATCH (au)-[rfollower:FOLLOWED_BY]->(uf)
+OPTIONAL MATCH (au)-[:FRIEND_OF]-(mf)-[:FRIEND_OF]-(uf)
+
+WITH uf,
+    COUNT(rfriend) > 0 AS isFriend,
+    COUNT(rfollower) > 0 AS isFollower,
+    COUNT(mf) AS mutualFriends
+RETURN uf, isFriend, isFollower, mutualFriends
+ORDER BY mutualFriends DESC
+SKIP $skip
+LIMIT $limit
+```
+**Explanation:**
+- Recommends other users that the current user is not yet following, prioritizing those with more mutual friends.
+- Also returns info such as whether already friends or following.
+
