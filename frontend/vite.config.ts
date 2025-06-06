@@ -24,7 +24,7 @@ export default defineConfig({
   },
   // define
   define: {
-    __APP_VERSION__: JSON.stringify('v0.0.1')
+    __APP_VERSION__: JSON.stringify('v0.0.1')  /*app version*/
   },
   // base:'https://daironpf.github.io/SocialSeed/',
   // base:'/SocialSeed/',
