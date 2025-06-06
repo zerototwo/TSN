@@ -15,7 +15,7 @@ import Publications from "@/features/Feed/LeftSide/Publications.vue";
   </div>
 
 </template>
-
+<!--commit message-->
 <style scoped>
 
 </style>

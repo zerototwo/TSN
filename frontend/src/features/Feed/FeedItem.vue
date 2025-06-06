@@ -9,4 +9,5 @@ import PostViewInFeed from "@/features/Feed/PostViewInFeed.vue";
 
 <style scoped>
 
+
 </style>
