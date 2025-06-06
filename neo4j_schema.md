@@ -1,4 +1,4 @@
-# Neo4j 数据表关系图（Mermaid）
+# Neo4j data relationship（Mermaid）
 
 ![img.png](img.png)
 

@@ -1,6 +1,6 @@
 ## La estructura para la funcionalidad de **notificaciones** ##
 
-### Estructura Propuesta
+### Estructura Propuesta1
 
 1. **NotificationItem.vue**:
     - Componente para representar un solo elemento de notificación.
