@@ -10,13 +10,13 @@ import {RouterLink} from "vue-router";
       </RouterLink>
 
       <nav class="menu">
-        <ul class="flex space-x-4">
-          <li><RouterLink to="/" class="hover:text-blue-300"><fa icon="fa-solid fa-home" /></RouterLink></li>
-          <li><RouterLink to="/su-profile/me" class="hover:text-blue-300"><fa icon="fa-solid fa-user" /></RouterLink></li>
-          <li><RouterLink to="/post/8754" class="hover:text-blue-300"><fa icon="fa-solid fa-bell" /></RouterLink></li>
-          <li><RouterLink to="" class="hover:text-blue-300"><fa icon="fa-solid fa-envelope" /></RouterLink></li>
-          <li><RouterLink to="" class="hover:text-blue-300"><fa icon="fa-solid fa-cog" /></RouterLink></li>
-        </ul>
+<!--        <ul class="flex space-x-4">-->
+<!--          <li><RouterLink to="/" class="hover:text-blue-300"><fa icon="fa-solid fa-home" /></RouterLink></li>-->
+<!--          <li><RouterLink to="/su-profile/me" class="hover:text-blue-300"><fa icon="fa-solid fa-user" /></RouterLink></li>-->
+<!--          <li><RouterLink to="/post/8754" class="hover:text-blue-300"><fa icon="fa-solid fa-bell" /></RouterLink></li>-->
+<!--          <li><RouterLink to="" class="hover:text-blue-300"><fa icon="fa-solid fa-envelope" /></RouterLink></li>-->
+<!--          <li><RouterLink to="" class="hover:text-blue-300"><fa icon="fa-solid fa-cog" /></RouterLink></li>-->
+<!--        </ul>-->
       </nav>
     </div>
   </div>
